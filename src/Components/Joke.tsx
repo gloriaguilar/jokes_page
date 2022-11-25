@@ -20,7 +20,7 @@ export default function Joke(props: propsJoke) {
 
     const singleJoke = () => {
         return (
-            <Typography variant="body1" sx={{ letterSpacing: '1px' }}>
+            <Typography className='fontCustomize' variant="body1" sx={{ letterSpacing: '1px' }}>
                 {props.joke}
             </Typography>
         )
@@ -33,7 +33,7 @@ export default function Joke(props: propsJoke) {
     const doubleJoke = () => {
 
         return (
-            <Typography variant="body1" sx={{ letterSpacing: '1px' }}>
+            <Typography className='fontCustomize' variant="body1" sx={{ letterSpacing: '1px' }}>
                 {props.setup}
                 <br />
                 <FormControlLabel
