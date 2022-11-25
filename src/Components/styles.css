@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+
+}
+
+.footerContent {
+    width: 100%;
+    background-color: #0b3660;
+    height: 80px;
+    justify-content: space-between;
+}
+
+.alignIcons {
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.61);
+    margin: 0 1%;
+}
+
+.flexAlignCenter {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flexDisplayBlock {
+    display: flex;
+    flex-direction: column;
+
+}

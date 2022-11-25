@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import HeaderResponsive from './Components/Header';
+import JokesContainer from './Components/JokesContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from './Components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <HeaderResponsive />
+        <Routes>
+          <Route path="/" element={<JokesContainer type={'Any'} />} />
+          <Route path="/Christmas" element={<JokesContainer type={'Christmas'} />} />
+          <Route path="/Spooky" element={<JokesContainer type={'Spooky'} />} />
+          <Route path="/Programming" element={<JokesContainer type={'Programming'} />} />
+          <Route path="/Dark" element={<JokesContainer type={'Dark'} />} />
+          <Route path="/Random" element={<JokesContainer type={'Any'} />} />
+          <Route path="/Misc" element={<JokesContainer type={'Misc'} />} />
+          <Route path="/Pun" element={<JokesContainer type={'Pun'} />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
     </div>
   );
 }
